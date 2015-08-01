@@ -20,11 +20,13 @@ function showPokemon(data){
 	pokemon = data;
 	//alert(pokemon.name);
 	var sprite = url+"media/img/"+number+".png";
-	$('#pokeImage').html('<img src="'+sprite+'" class="silhouette"/>');
+	$('#pokeImage').html('<img id="sprite" src="'+sprite+'" class="silhouette"/>');
+	//$('#sprite').addClass("silhouette");
 }
 
 function verifyName(e){
 	var userInput = $('#name').val();
+	$('#sprite').removeClass("silhouette");
 	if(userInput === pokemon.name.toLowerCase()){
 		alert("You did it! It's "+pokemon.name);
 	}else{
@@ -33,5 +35,5 @@ function verifyName(e){
 }
 
 function errorReq(){
-	
+
 }
