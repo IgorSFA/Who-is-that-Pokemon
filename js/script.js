@@ -31,3 +31,7 @@ function verifyName(e){
 		alert("You fail! It's "+pokemon.name);
 	}
 }
+
+function errorReq(){
+	
+}
