@@ -6,7 +6,9 @@ var url = "http://pokeapi.co/";
 
 function getAnotherPoke(e){
 	var service = "api/v1/pokemon/";
-	number = randomNumber(1, 151);
+	var min = $('#min').val();
+	var max = $('#max').val();
+	number = randomNumber(min, max);
 	$.get(url+service+number+"/")
 		.done(showPokemon)
 		.fail(errorReq);
