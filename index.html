@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Who is that Pokemon</title>
 	<link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<label><input type="checkbox" name="gen1" value="gen1" class="gen">gen I</label>
+	<label><input type="checkbox" name="gen1" value="gen1" class="gen" checked>gen I</label>
 	<label><input type="checkbox" name="gen2" value="gen2" class="gen">gen II</label>
 	<label><input type="checkbox" name="gen1" value="gen3" class="gen">gen III</label>
 	<label><input type="checkbox" name="gen2" value="gen4" class="gen">gen IV</label>
@@ -17,6 +18,9 @@
 	<div id="pokeImage"></div>
 	<input type="text" id="name" placeholder="Say my name"/>
 	<button id="verify">Verify</button>
+	<h3 id="score"></h3>
+	<h3 id="scoreMax"></h3>
+	<button id="reset">Reset score</button>
 
 	<!-- SCRIPTS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

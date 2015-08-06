@@ -1,7 +1,6 @@
-$('#newPoke').click(getAnotherPoke);
-$('#verify').click(verifyName);
-
 var pokemon, number;
+var score = 0;
+var scoreMax = localStorage.getItem("scoreMax") || score;
 var url = "http://pokeapi.co/";
 var genNumbers = {
 	gen1: [1,151],
@@ -11,6 +10,12 @@ var genNumbers = {
 	gen5: [494,649],
 	gen6: [650,721]
 };
+
+$('#score').text("Score: "+score);
+$('#scoreMax').text("Record: "+scoreMax);
+$('#newPoke').click(getAnotherPoke);
+$('#verify').click(verifyName);
+$('#reset').click(resetRecord);
 
 function getAnotherPoke(e){
 	var service = "api/v1/pokemon/";
@@ -47,9 +52,24 @@ function verifyName(e){
 	$('#sprite').removeClass("silhouette");
 	if(userInput === pokemon.name.toLowerCase()){
 		alert("You did it! It's "+pokemon.name);
+		$('#score').text("Score: "+(++score));
+		if(score > localStorage.getItem("scoreMax")){
+			localStorage.setItem("scoreMax", score);
+			$('#scoreMax').text("Record: "+score);
+		}
+
 	}else{
 		alert("You fail! It's "+pokemon.name);
+		score = 0;
+		$('#score').text("Score: "+score);
 	}
+}
+
+function resetRecord(){
+	localStorage.setItem("scoreMax", 0);
+	$('#scoreMax').text("Record: "+0);
+	score = 0;
+	$('#score').text("Score: "+score);
 }
 
 function errorReq(){
