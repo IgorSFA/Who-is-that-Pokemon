@@ -15,6 +15,11 @@ $('#score').text("Score: "+score);
 $('#scoreMax').text("Record: "+scoreMax);
 $('#newPoke').click(getAnotherPoke);
 $('#verify').click(verifyName);
+$('#name').keydown(function(key){
+	if(key.keyCode === 13){
+		verifyName();
+	}
+});
 $('#reset').click(resetRecord);
 
 function getAnotherPoke(e){

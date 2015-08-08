@@ -2,3 +2,7 @@
 	filter: contrast(0%) brightness(50%);
 	-webkit-filter: contrast(0%) brightness(50%);
 }
+
+body{
+	text-align: center;
+}
