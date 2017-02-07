@@ -51,7 +51,6 @@ function showPokemon(data){
 	while(actualNumber.length < 3){
 		actualNumber = 0 + actualNumber;
 	}
-	alert(actualNumber);
 	var sprite = "http://pokeunlock.com/wp-content/uploads/2015/01/"+actualNumber+"-80x80.png";
 	$('#pokeImage').html('<img id="sprite" src="'+sprite+'" class="silhouette"/>');
 	//$('#sprite').addClass("silhouette");
