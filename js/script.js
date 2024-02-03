@@ -23,7 +23,7 @@ $('#name').keydown(function(key){
 $('#reset').click(resetRecord);
 
 function getAnotherPoke(e){
-	var service = "api/v1/pokemon/";
+	var service = "api/v2/pokemon/";
 	var gens = getGenerations();
 	number = randomNumber(gens);
 	$.get(url+service+number+"/")
