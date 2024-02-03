@@ -48,9 +48,6 @@ function showPokemon(data){
 	pokemon = data;
 	//alert(pokemon.name);
 	var actualNumber = ""+number;
-	while(actualNumber.length < 3){
-		actualNumber = 0 + actualNumber;
-	}
 	var sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+actualNumber+".png";
 	$('#pokeImage').html('<img id="sprite" src="'+sprite+'" class="silhouette"/>');
 	//$('#sprite').addClass("silhouette");
