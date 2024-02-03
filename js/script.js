@@ -1,7 +1,7 @@
 var pokemon, number;
 var score = 0;
 var scoreMax = localStorage.getItem("scoreMax") || score;
-var url = "http://pokeapi.co/";
+var url = "https://pokeapi.co/";
 var genNumbers = {
 	gen1: [1,151],
 	gen2: [152,251],
@@ -51,7 +51,7 @@ function showPokemon(data){
 	while(actualNumber.length < 3){
 		actualNumber = 0 + actualNumber;
 	}
-	var sprite = "http://pokeunlock.com/wp-content/uploads/2015/01/"+actualNumber+"-80x80.png";
+	var sprite = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+actualNumber+".png";
 	$('#pokeImage').html('<img id="sprite" src="'+sprite+'" class="silhouette"/>');
 	//$('#sprite').addClass("silhouette");
 }
